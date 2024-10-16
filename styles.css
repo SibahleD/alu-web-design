@@ -96,7 +96,9 @@ h2 {
 }
 
 .header-index {
-  padding: 0;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 0;
   display: flex;
   justify-content: center;
 }
@@ -113,9 +115,115 @@ h2 {
   margin: 0 10px;
 }
 
+
+
+.header-index-alt *, .header-index-alt *::after, .header-index-alt *::before {
+  box-sizing: border-box;
+}
+
+.button {
+  display: none;
+  justify-content: center;
+}
+.button button{
+  background-color: var(--contrast-color);
+  border: none;
+  color: var(--accent-color);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.button button:hover {
+  background-color: var(--shadow-color);
+  transition: all 0.5s;
+}
+
+/*  Modal  */
+
+.modal {
+  position: fixed;
+  transform: translate(50%, 50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: none;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: var(--contrast-color);
+  box-shadow: 0px 0 18px var(--shadow-color);
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(50%, 50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  /* padding: 10px 15px; */
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.modal-body ul {
+  list-style: none;
+  align-items: center;
+  text-align: center;
+}
+
+.modal-body ul li {
+  padding: 10px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(25%);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
 @media screen and (max-width: 768px) {
   .header-index {
     display: none;
+  }
+  .button {
+    display: flex;
   }
 }
 

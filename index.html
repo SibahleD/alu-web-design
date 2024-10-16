@@ -38,6 +38,29 @@
             </li>
           </ul>
         </nav>
+        <div class="header-index-alt">
+          <div class="button">
+            <button data-modal-target="#modal">Open Modal</button>
+          </div>
+          <div class="modal" id="modal">
+            <div class="modal-header">
+              <div class="title">Index</div>
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div data-close-button class="close-button">
+              <div class="modal-body">
+                <ul class="list">
+                  <li><a href="#about-me">About Me</a></li>
+                  <li><a href="#education">Education</a></li>
+                  <li><a href="#work">Work</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#skills">Skills</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="overlay"></div>
+        </div> 
       </header>
       <main>
         <section class="section-homepage">
@@ -60,7 +83,7 @@
             </div>
           </div>
         </section>
-        <div class="section-about">
+        <div id="about-me" class="section-about">
           <h1 class="section-title">About Me</h1>
           <div class="about-info">
             <div class="info-1">
@@ -277,9 +300,9 @@
                 <small>6 years experience</small>
               </div>
               <div id="skill-photo">
-                <h1>Photo Editing</h1>
-                <p>Manipulatng and editing photos for various uses</p>
-                <small>6 years experience</small>
+                <h1>Computer Literacy</h1>
+                <p>Ease working with computers of various OS</p>
+                <small>10 years experience</small>
               </div>
             </div>
           </div>
